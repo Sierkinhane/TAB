@@ -117,6 +117,11 @@ python tools/test.py --cfg experiments/wflw/face_alignment_wflw_tab.yaml --best_
 ````
 
 ## Citation
-
-## Aknowlegement
-Thanks for [HRNet's](https://github.com/HRNet) open source project.
+```
+@article{xie2020think,
+  title={Think about boundary: Fusing multi-level boundary information for landmark heatmap regression},
+  author={Xie, Jinheng and Wan, Jun and Shen, Linlin and Lai, Zhihui},
+  journal={arXiv preprint arXiv:2008.10924},
+  year={2020}
+}
+```
