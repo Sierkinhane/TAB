@@ -1,0 +1,63 @@
+GPUID: 6
+WORKERS: 8
+PRINT_FREQ: 20
+OUTPUT_DIR: 'output'
+LOG_DIR: 'log'
+PIN_MEMORY: False
+BOUNDARY_DIR: 'output/boundary/'
+VIS_VALIDATION_DIR: 'output/visualization_300W/'
+CUDNN:
+  BENCHMARK: True
+  DETERMINISTIC: True
+  ENABLED: True
+
+DATASET:
+  DATASET: 300W
+  ROOT: '/NAS_REMOTE/xjheng/landmarks/data/300w/images'
+#  ROOT: 'H:/DL-DATASET/68-LANDMARKS-300W/'
+  TRAINSET: '/NAS_REMOTE/xjheng/landmarks/data/300w/face_landmarks_300w_train.csv'
+  TESTSET: '/NAS_REMOTE/xjheng/landmarks/data/300w/face_landmarks_300w_valid.csv'
+#  TESTSET: '/NAS_REMOTE/xjheng/landmarks/data/300w/face_landmarks_300w_valid_common.csv'
+#  TESTSET: '/NAS_REMOTE/xjheng/landmarks/data/300w/face_landmarks_300w_valid_challenge.csv'
+#  TESTSET: '/NAS_REMOTE/xjheng/landmarks/data/300w/face_landmarks_300w_test.csv'
+  FLIP: true
+  SCALE_FACTOR: 0.25
+  ROT_FACTOR: 60
+  IAA_AUG: true
+  STD: [0.229, 0.224, 0.225]
+  MEAN: [0.485, 0.456, 0.406]
+
+MODEL:
+  NAME: 'TAB'
+  NUM_JOINTS: 68
+  NUM_BOUNDARIES: 16
+  NUM_STACKS: 2
+  WIDTH: 48
+  BSIGMA: 1.0
+  BMU: 0
+  INIT_WEIGHTS: true
+  PRETRAINED: ''
+  SIGMA: 1.5
+  IMAGE_SIZE:
+    - 256
+    - 256
+  HEATMAP_SIZE:
+    - 64
+    - 64
+  TARGET_TYPE: 'Gaussian'
+
+TRAIN:
+  BATCH_SIZE_PER_GPU: 16
+  SHUFFLE: true
+  BEGIN_EPOCH: 0
+  END_EPOCH: 140
+  RESUME: true
+  OPTIMIZER: 'adam'
+  LR: 0.0001
+  WD: 0.0
+  LR_STEP: [80, 120]
+  LR_FACTOR: 0.1
+  MOMENTUM: 0.0
+  NESTEROV: false
+TEST:
+  BATCH_SIZE_PER_GPU: 8
