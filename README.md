@@ -1,4 +1,4 @@
-## Think About Boundary
+## Facial Landmark Detection
 <div align=center>
 
 ![](images/JasonWang.gif)
@@ -6,7 +6,7 @@
 </div>
 
 ## Introduction
-This is the official code of Think about boundary: Fusing multi-level boundary information for landmark heatmap regression.
+This is the official code of ![Think about boundary: Fusing multi-level boundary information for landmark heatmap regression](https://arxiv.org/abs/2008.10924).
 <div align=center>
 
 ![](images/tab.png)
