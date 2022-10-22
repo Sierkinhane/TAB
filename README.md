@@ -5,11 +5,18 @@
 
 </div>
 
+<div align=center>
+
+![](images/landmark.png)
+
+</div>
+
 ## Introduction
 This is the official code of [Think about boundary: Fusing multi-level boundary information for landmark heatmap regression](https://arxiv.org/abs/2008.10924).
 <div align=center>
 
 ![](images/tab.png)
+
 
 </div>
 <!--## Performance
